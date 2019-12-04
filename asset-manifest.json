@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d827c825.chunk.css",
+    "main.js": "/static/js/main.7eeaec12.chunk.js",
+    "main.js.map": "/static/js/main.7eeaec12.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.87d397d6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.87d397d6.js.map",
+    "static/js/2.8f514b03.chunk.js": "/static/js/2.8f514b03.chunk.js",
+    "static/js/2.8f514b03.chunk.js.map": "/static/js/2.8f514b03.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.df31c95a3f7fd787c899e4d3ef1ddfb5.js": "/precache-manifest.df31c95a3f7fd787c899e4d3ef1ddfb5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d827c825.chunk.css.map": "/static/css/main.d827c825.chunk.css.map",
+    "static/media/agora.png": "/static/media/agora.95abb209.png",
+    "static/media/background-landing-page.jpg": "/static/media/background-landing-page.c304dd57.jpg",
+    "static/media/sokhna3.jpg": "/static/media/sokhna3.e137c570.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87d397d6.js",
+    "static/js/2.8f514b03.chunk.js",
+    "static/css/main.d827c825.chunk.css",
+    "static/js/main.7eeaec12.chunk.js"
+  ]
+}

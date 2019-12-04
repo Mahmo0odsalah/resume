@@ -12,13 +12,128 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { HashLink as Link } from "react-router-hash-link";
 const useStyles = makeStyles({
+  "@keyframes fadeOut": {
+    from: {
+      opacity: "100%"
+    },
+    to: {
+      opacity: "0%"
+    }
+  },
+  "@keyframes cfadeOut": {
+    from: {
+      opacity: "70%"
+    },
+    to: {
+      opacity: "0%"
+    }
+  },
+  "@keyframes fadeIn": {
+    "0%": {
+      opacity: " 0%"
+    },
+
+    "100%": {
+      opacity: " 100%"
+    }
+  },
+  "@keyframes cfadeIn": {
+    "0%": {
+      opacity: " 0%"
+    },
+
+    "100%": {
+      opacity: " 70%"
+    }
+  },
+  "@keyframes moveUp": {
+    "50%": {
+      transform: "translateY(-50%)"
+    },
+
+    "100%": {
+      transform: "translateY(-40%)"
+    }
+  },
+  "@keyframes navAppear ": {
+    "0%": {
+      "background-color": "#20165400"
+    },
+
+    "100%": {
+      "background-color": "#201654"
+    }
+  },
+  "@keyframes navDisappear ": {
+    "0%": {
+      "background-color": "#201654"
+    },
+
+    "100%": {
+      "background-color": "#20165400"
+    }
+  },
   card: {
     maxWidth: 345
   },
   media: {
     height: 140
+  },
+
+  fade_out: {
+    opacity: "100%",
+    "animation-name": `$fadeOut`,
+    "animation-duration": "1s",
+    "animation-fill-mode": "forwards"
+  },
+  fade_in: {
+    opacity: ",",
+    "animation-name": `$fadeIn`,
+    "animation-duration": "1s",
+    "animation-fill-mode": "forwards"
+  },
+  card_fade_in: {
+    opacity: "100%",
+    "background-color": "ivory",
+    "animation-name": `$fadeIn`,
+    "animation-duration": " 2s",
+    "animation-fill-mode": "forwards"
+  },
+
+  card1_fade_in: {
+    opacity: "0%",
+    "background-color": "#95188c",
+    "animation-name": `$cfadeIn`,
+    "animation-duration": " 1s",
+    "animation-fill-mode": "forwards"
+  },
+  card1_fade_out: {
+    opacity: "70%",
+    "background-color": "#95188c",
+    "animation-name": `$cfadeOut`,
+    "animation-duration": " 1s",
+    "animation-fill-mode": "forwards"
+  },
+  card_move_up: {
+    "animation-name": `$moveUp`,
+    "animation-duration": "2s",
+    "animation-fill-mode": "forwards"
+  },
+  opaque: {
+    "background-color": " #20165400",
+    "animation-name": `$navAppear`,
+    "animation-duration": "1s",
+    "animation-fill-mode": "forwards"
+  },
+  transparent: {
+    "background-color": "#201654",
+
+    "animation-name": `$navDisappear`,
+    "animation-duration": " 1s",
+    "animation-fill-mode": "forwards"
   }
 });
+
 export default function HomePage() {
   const bgVisible = useRef(true);
   const bgref = useRef(null);
@@ -52,20 +167,20 @@ export default function HomePage() {
     }
     animatedElements.current.forEach(element => {
       if (isInViewport(element)) {
-        element.className = "card-fade-in card-move-up";
+        element.className = `${classes.card_fade_in} ${classes.card_move_up}`;
       }
     });
 
     if (window.scrollY > window.innerHeight * 0.5) {
-      navbarref.current.className = "opaque";
-      bgref.current.className = "fade-out";
-      bgref2.current.className = classes.card + " card1-fade-out";
+      navbarref.current.className = classes.opaque;
+      bgref.current.className = classes.fade_out;
+      bgref2.current.className = `${classes.card} ${classes.card1_fade_out}`;
       bgVisible.current = false;
     } else {
       if (!bgVisible.current) {
-        navbarref.current.className = "transparent";
-        bgref.current.className = "fade-in";
-        bgref2.current.className = classes.card + " card1-fade-in";
+        navbarref.current.className = classes.transparent;
+        bgref.current.className = classes.fade_in;
+        bgref2.current.className = `${classes.card} ${classes.card1_fade_in}`;
         bgVisible.current = true;
       }
     }

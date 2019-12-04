@@ -1,0 +1,191 @@
+html,
+.mainDiv {
+  overflow-x: hidden;
+  height: 200%;
+  background: #201654; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #201654,
+    #95188c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #201654,
+    #95188c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes cfadeOut {
+  from {
+    opacity: 70%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+.fade-out {
+  opacity: 100%;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes cfadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 70%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+  }
+
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-40%);
+  }
+}
+
+.fade-in {
+  opacity: 0%;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card-fade-in {
+  opacity: 100%;
+  background-color: ivory;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.card1-fade-in {
+  opacity: 0%;
+  background-color: #95188c;
+  animation-name: cfadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.card1-fade-out {
+  opacity: 70%;
+  background-color: #95188c;
+  animation-name: cfadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.card-move-up {
+  animation-name: moveUp;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #20165400;
+}
+
+.opaque {
+  background-color: #20165400;
+  animation-name: navAppear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navAppear {
+  0% {
+    background-color: #20165400;
+  }
+
+  100% {
+    background-color: #201654;
+  }
+}
+
+@keyframes navDisappear {
+  0% {
+    background-color: #201654;
+  }
+
+  100% {
+    background-color: #20165400;
+  }
+}
+.transparent {
+  background-color: #201654;
+
+  animation-name: navDisappear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+ul:hover {
+  opacity: 100%;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: ivory;
+}
+
+.footer {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  padding-bottom: 4%;
+  padding-top: 1%;
+  margin-bottom: 0;
+  background-color: #0a003f70;
+  color: white;
+  text-align: center;
+}
+
+.text {
+  font-family: "Times New Roman", Times, serif;
+  color: ivory;
+  font-size: xx-large;
+  margin-bottom: 15%;
+}
